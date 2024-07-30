@@ -1,4 +1,3 @@
-import { StyleSheet } from "react-native";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 
 import { RootNavigator } from "./navigation";
@@ -6,7 +5,7 @@ import { ThemeProvider } from "./contexts";
 
 export default function App() {
 	return (
-		<SafeAreaProvider style={styles.container}>
+		<SafeAreaProvider>
 			<ThemeProvider>
 				<RootNavigator />
 			</ThemeProvider>
@@ -14,10 +13,3 @@ export default function App() {
 	);
 }
 
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		alignItems: "center",
-		justifyContent: "center",
-	},
-});
